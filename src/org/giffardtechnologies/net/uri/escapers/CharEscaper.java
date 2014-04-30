@@ -49,6 +49,7 @@ public abstract class CharEscaper implements Escaper {
 	 * @return the escaped form of {@code string}
 	 * @throws NullPointerException if {@code string} is null
 	 */
+	@Override
 	public String escape(String string) {
 		// Inlineable fast-path loop which hands off to escapeSlow() only if needed
 		int length = string.length();
@@ -83,14 +84,17 @@ public abstract class CharEscaper implements Escaper {
 	 *     escaping it
 	 * @throws NullPointerException if {@code out} is null.
 	 */
+	@Override
 	public Appendable escape(final Appendable out) {
 		checkNotNull(out);
 		
 		return new Appendable() {
+			@Override
 			public Appendable append(CharSequence csq) throws IOException {
 				return append(csq, 0, csq.length());
 			}
 			
+			@Override
 			public Appendable append(CharSequence csq, int start, int end) throws IOException {
 				// "no escape" path (pushing the "escape" path into a separate method)
 				// to make this more "inlineable".
@@ -111,6 +115,7 @@ public abstract class CharEscaper implements Escaper {
 				return this;
 			}
 			
+			@Override
 			public Appendable append(char c) throws IOException {
 				char[] escaped = escape(c);
 				if (escaped == null) {

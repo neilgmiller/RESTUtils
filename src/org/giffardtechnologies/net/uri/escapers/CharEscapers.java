@@ -52,18 +52,21 @@ public final class CharEscapers {
 			// the returned Appendable will throw a NullPointerException if asked to
 			// append null.
 			return new Appendable() {
+				@Override
 				public Appendable append(CharSequence csq) throws IOException {
 					checkNotNull(csq);
 					out.append(csq);
 					return this;
 				}
 				
+				@Override
 				public Appendable append(CharSequence csq, int start, int end) throws IOException {
 					checkNotNull(csq);
 					out.append(csq, start, end);
 					return this;
 				}
 				
+				@Override
 				public Appendable append(char c) throws IOException {
 					out.append(c);
 					return this;
