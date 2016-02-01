@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="libs/httpclient-4.3.3.jar"/>
+	<classpathentry kind="lib" path="libs/httpcore-4.3.2.jar"/>
+	<classpathentry kind="lib" path="libs/slf4j-api-1.7.7-sources.jar"/>
+	<classpathentry kind="lib" path="libs/slf4j-api-1.7.7.jar"/>
+	<classpathentry kind="lib" path="libs/google-gson-2.2.4.jar" sourcepath="libs/google-gson-source-2.2.4.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:platform:/resource/RESTUtils/libs/google-gson-javadoc-2.2.4.zip!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="test-libs/commons-codec-1.8.jar"/>
+	<classpathentry kind="lib" path="test-libs/hamcrest-core-1.1.jar"/>
+	<classpathentry kind="lib" path="test-libs/hamcrest-generator-1.1.jar"/>
+	<classpathentry kind="lib" path="test-libs/hamcrest-integration-1.1.jar"/>
+	<classpathentry kind="lib" path="test-libs/hamcrest-library-1.1.jar"/>
+	<classpathentry kind="lib" path="test-libs/jcl-over-slf4j-1.7.7.jar"/>
+	<classpathentry kind="lib" path="test-libs/junit-4.8.2.jar"/>
+	<classpathentry kind="lib" path="test-libs/log4j-1.2.17.jar"/>
+	<classpathentry kind="lib" path="test-libs/slf4j-log4j12-1.7.7.jar"/>
+	<classpathentry kind="lib" path="libs/iso8601-formatter.jar"/>
+	<classpathentry kind="lib" path="libs/httpclient-cache.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

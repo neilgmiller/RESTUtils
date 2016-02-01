@@ -13,21 +13,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.giffardtechnologies.net.http;
+package org.giffardtechnologies.net.http.request;
 
-public enum HTTPScheme {
-	HTTP("http"), HTTPS("https")
+public interface Deserializer {
 	
-	;
-	
-	private String m_schemeName;
-	
-	private HTTPScheme(String scheme) {
-		m_schemeName = scheme;
-	}
-	
-	public String getSchemeName() {
-		return m_schemeName;
-	}
+	public <T> T fromJson(String json, Class<T> classOfT);
 	
 }

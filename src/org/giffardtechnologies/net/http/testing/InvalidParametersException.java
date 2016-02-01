@@ -13,21 +13,26 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.giffardtechnologies.net.http;
+package org.giffardtechnologies.net.http.testing;
 
-public enum HTTPScheme {
-	HTTP("http"), HTTPS("https")
-	
-	;
-	
-	private String m_schemeName;
-	
-	private HTTPScheme(String scheme) {
-		m_schemeName = scheme;
+public class InvalidParametersException extends RuntimeException {
+
+	private static final long serialVersionUID = 1L;
+
+	public InvalidParametersException() {
+		super();
 	}
-	
-	public String getSchemeName() {
-		return m_schemeName;
+
+	public InvalidParametersException(String message, Throwable cause) {
+		super(message, cause);
 	}
-	
+
+	public InvalidParametersException(String message) {
+		super(message);
+	}
+
+	public InvalidParametersException(Throwable cause) {
+		super(cause);
+	}
+
 }
